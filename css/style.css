@@ -32,28 +32,32 @@ nav svg {
   margin-bottom: 2.5rem;
 }
 
-.right {
+.left {
   background: center/cover url("../images/illustration-mockups.svg") no-repeat;
   min-height: 14rem;
   margin-bottom: 3rem;
 }
 
-.left {
+.left svg {
+  display: none;
+}
+
+.right {
   text-align: center;
 }
 
-.left h1 {
+.right h1 {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
 }
 
-.left p {
+.right p {
   color: rgba(255, 255, 255, 0.719);
   padding: 1rem 0 2rem;
 }
 
-.left button {
+.right button {
   font-size: 1rem;
   color: #674baf;
   padding: .6rem;
@@ -65,7 +69,7 @@ nav svg {
   cursor: pointer;
 }
 
-.left button:hover {
+.right button:hover {
   background-color: #e882e8;
   color: #fff;
 }
@@ -88,5 +92,68 @@ nav svg {
 .socials svg:hover {
   fill: #e882e8;
   border: #e882e8 1px solid;
+}
+
+@media (min-width: 550px) {
+  body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: center/cover url("../images/bg-desktop.svg") no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  main {
+    padding: 0 3rem;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 89vh;
+  }
+  nav svg {
+    width: 10rem;
+    margin: 0;
+  }
+  .left {
+    background: none;
+  }
+  .left svg {
+    margin-top: 4rem;
+    display: block;
+  }
+  .right {
+    padding: 0 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 89vh;
+  }
+  .info {
+    text-align: left;
+  }
+  .info h1 {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+  }
+  .info button {
+    width: 170px;
+    padding: .8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
