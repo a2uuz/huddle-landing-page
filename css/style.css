@@ -95,6 +95,9 @@ nav svg {
 }
 
 @media (min-width: 550px) {
+  body {
+    overflow: hidden;
+  }
   body::after {
     content: '';
     position: absolute;

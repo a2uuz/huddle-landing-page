@@ -115,8 +115,9 @@ button{
 }
 
 @media(min-width: 550px){
-
-  body::after{
+body{
+    overflow: hidden;
+  &::after{
   content: '';
   position: absolute;
   width: 100%;
@@ -126,7 +127,7 @@ button{
  left: 0;
   z-index:-1;
 }
-
+}
 
 main{
     padding:0 3rem;
